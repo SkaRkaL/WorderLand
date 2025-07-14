@@ -43,7 +43,12 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+
 :root {
+  --correct: oklch(52.7% 0.154 150.069);
+  --semi-correct: oklch(82.8% 0.189 84.429);
+  --wrong: #878d96;
+  --primary: #e2e8f0;
   --radius: 0.625rem;
   --background: #121213; /* #121213 */
   --foreground: oklch(0.145 0 0);
@@ -119,4 +124,36 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+
+
+
+.board {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.board__row {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+}
+
+.board__cell {
+  width: 60px;
+  height: 60px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  border: 1px solid #3a3a3c;
+  font-size: large;
+  font-weight: 900;
 }

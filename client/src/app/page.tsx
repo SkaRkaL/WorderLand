@@ -8,19 +8,19 @@ export default function Home() {
 
   const [error, setError] = useState('');
 
-  useEffect(() => {
-    fetch(process.env.NEXT_PUBLIC_API_URL + "/")
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error(`HTTP error! status: ${res.status}`);
-        }
-        return res.text();
-      })
-      .catch((error) => {
-        console.error('Error fetching data:', error);
-        setError('Failed to connect to the server. Please make sure the server is running.');
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch(process.env.NEXT_PUBLIC_API_URL + "/")
+  //     .then((res) => {
+  //       if (!res.ok) {
+  //         throw new Error(`HTTP error! status: ${res.status}`);
+  //       }
+  //       return res.text();
+  //     })
+  //     .catch((error) => {
+  //       console.error('Error fetching data:', error);
+  //       setError('Failed to connect to the server. Please make sure the server is running.');
+  //     });
+  // }, []);
 
 
   if (error) {
